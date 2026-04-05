@@ -147,10 +147,7 @@
             font-weight: 400;
         }
 
-        .hero h1 em {
-            font-style: italic;
-            color: var(--accent);
-        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
 
         .hero-sub {
             font-size: clamp(1rem, 2vw, 1.25rem);
@@ -225,17 +222,9 @@
             flex-shrink: 0;
         }
 
-        .ticker-item strong {
-            color: var(--accent);
-            font-family: 'DM Mono', monospace;
-        }
+        .ticker-item strong { color: var(--accent); font-family: 'DM Mono', monospace; }
 
-        .ticker-dot {
-            width: 4px;
-            height: 4px;
-            background: var(--text-dim);
-            border-radius: 50%;
-        }
+        .ticker-dot { width: 4px; height: 4px; background: var(--text-dim); border-radius: 50%; }
 
         @keyframes ticker {
             0% { transform: translateX(0); }
@@ -272,16 +261,111 @@
 
         .video-wrapper iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             border: none;
         }
 
         .video-caption {
             margin-top: 20px;
             font-size: 0.85rem;
+            color: var(--text-dim);
+            font-family: 'DM Mono', monospace;
+        }
+
+        /* WORKSHOP WAITLIST SECTION */
+        .waitlist-section {
+            background: var(--bg-2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 100px 40px;
+        }
+
+        .waitlist-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .waitlist-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border: 1px solid rgba(251,146,60,0.3);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--orange);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            font-family: 'DM Mono', monospace;
+        }
+
+        .waitlist-badge-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .waitlist-inner h2 {
+            font-family: 'Instrument Serif', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .waitlist-inner h2 em { font-style: italic; color: var(--orange); }
+
+        .waitlist-inner p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            line-height: 1.7;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .waitlist-details {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .waitlist-detail {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: 'DM Mono', monospace;
+        }
+
+        .waitlist-detail-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--orange);
+            border-radius: 50%;
+        }
+
+        .waitlist-frame {
+            width: 100%;
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 200px;
+        }
+
+        .waitlist-note {
+            margin-top: 16px;
+            font-size: 0.75rem;
             color: var(--text-dim);
             font-family: 'DM Mono', monospace;
         }
@@ -314,18 +398,8 @@
         .problem-item:last-child { border-radius: 0 0 16px 0; }
 
         .problem-icon { font-size: 1.5rem; margin-bottom: 16px; }
-
-        .problem-item h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .problem-item p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
+        .problem-item h4 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+        .problem-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
 
         /* STATEMENT */
         .statement-section {
@@ -345,10 +419,7 @@
             font-weight: 400;
         }
 
-        .statement-section h2 em {
-            font-style: italic;
-            color: var(--accent);
-        }
+        .statement-section h2 em { font-style: italic; color: var(--accent); }
 
         /* PRODUCT SCREENSHOTS */
         .screenshots-section {
@@ -419,16 +490,8 @@
         .step:last-child { border-radius: 0 16px 16px 0; }
         .step:hover { border-color: rgba(232,213,163,0.3); }
 
-        .step-num {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--accent);
-            letter-spacing: 0.1em;
-            margin-bottom: 24px;
-        }
-
+        .step-num { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 24px; }
         .step h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
-
         .step p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
         /* PROOF NUMBERS */
@@ -458,19 +521,8 @@
         .proof-num:first-child { border-radius: 16px 0 0 16px; }
         .proof-num:last-child { border-radius: 0 16px 16px 0; }
 
-        .proof-num .number {
-            font-family: 'Instrument Serif', serif;
-            font-size: 3rem;
-            color: var(--accent);
-            line-height: 1;
-            margin-bottom: 8px;
-        }
-
-        .proof-num .label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
+        .proof-num .number { font-family: 'Instrument Serif', serif; font-size: 3rem; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+        .proof-num .label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
 
         .proof-source {
             margin-top: 24px;
@@ -480,24 +532,12 @@
             font-family: 'DM Mono', monospace;
         }
 
-        .proof-source a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+        .proof-source a { color: var(--accent); text-decoration: none; }
 
         /* WHAT'S INSIDE */
-        .inside-section {
-            padding: 100px 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .inside-section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
 
-        .inside-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            margin-top: 60px;
-        }
+        .inside-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 60px; }
 
         .inside-item {
             display: flex;
@@ -513,8 +553,7 @@
         .inside-item:hover { border-color: rgba(232,213,163,0.3); }
 
         .inside-check {
-            width: 24px;
-            height: 24px;
+            width: 24px; height: 24px;
             background: rgba(74,222,128,0.1);
             border: 1px solid rgba(74,222,128,0.3);
             border-radius: 6px;
@@ -526,9 +565,7 @@
         }
 
         .inside-check svg { width: 12px; height: 12px; color: var(--green); }
-
         .inside-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 4px; }
-
         .inside-item p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; }
 
         /* NEWSLETTERS SECTION */
@@ -541,12 +578,7 @@
 
         .newsletters-inner { max-width: 1100px; margin: 0 auto; }
 
-        .newsletters-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 60px;
-        }
+        .newsletters-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 60px; }
 
         .newsletter-card {
             background: var(--bg);
@@ -565,131 +597,43 @@
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
         }
 
-        .newsletter-num {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--text-dim);
-            letter-spacing: 0.1em;
-            margin-bottom: 16px;
-        }
+        .newsletter-num { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em; margin-bottom: 16px; }
 
-        .newsletter-card h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text);
-            line-height: 1.4;
-            margin-bottom: 16px;
-            flex-grow: 1;
-        }
+        .newsletter-card h4 { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.4; margin-bottom: 16px; flex-grow: 1; }
 
-        .newsletter-read {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 0.8rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-top: auto;
-        }
-
+        .newsletter-read { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--accent); font-weight: 600; margin-top: auto; }
         .newsletter-read svg { width: 14px; height: 14px; }
 
         /* FOR WHO */
-        .who-section {
-            padding: 100px 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .who-section { padding: 100px 40px; max-width: 1100px; margin: 0 auto; }
 
-        .who-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: start;
-            margin-top: 60px;
-        }
+        .who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 60px; }
 
-        .who-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
+        .who-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
 
-        .who-list li {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            font-size: 1rem;
-            color: var(--text);
-        }
+        .who-list li { display: flex; align-items: center; gap: 16px; font-size: 1rem; color: var(--text); }
 
-        .who-list li::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-            flex-shrink: 0;
-        }
+        .who-list li::before { content: ''; width: 8px; height: 8px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
 
         .not-list li::before { background: var(--text-dim) !important; }
+        .not-list li { color: var(--text-muted) !important; text-decoration: line-through; text-decoration-color: var(--text-dim); }
 
-        .not-list li {
-            color: var(--text-muted) !important;
-            text-decoration: line-through;
-            text-decoration-color: var(--text-dim);
-        }
-
-        .who-sub-label {
-            font-family: 'Instrument Serif', serif;
-            font-size: 1.5rem;
-            margin-bottom: 24px;
-            font-weight: 400;
-        }
+        .who-sub-label { font-family: 'Instrument Serif', serif; font-size: 1.5rem; margin-bottom: 24px; font-weight: 400; }
 
         /* CTA SECTION */
-        .cta-section {
-            background: var(--bg-2);
-            border-top: 1px solid var(--border);
-            padding: 120px 40px;
-            text-align: center;
-        }
+        .cta-section { background: var(--bg-2); border-top: 1px solid var(--border); padding: 120px 40px; text-align: center; }
 
         .cta-inner { max-width: 700px; margin: 0 auto; }
 
-        .cta-section h2 {
-            font-family: 'Instrument Serif', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 24px;
-            font-weight: 400;
-            line-height: 1.1;
-        }
+        .cta-section h2 { font-family: 'Instrument Serif', serif; font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 24px; font-weight: 400; line-height: 1.1; }
 
         .cta-section h2 em { font-style: italic; color: var(--accent); }
 
-        .cta-section p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 48px;
-            line-height: 1.7;
-        }
+        .cta-section p { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 48px; line-height: 1.7; }
 
-        .cta-details {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 32px;
-            flex-wrap: wrap;
-        }
+        .cta-details { display: flex; justify-content: center; gap: 40px; margin-top: 32px; flex-wrap: wrap; }
 
-        .cta-detail {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
+        .cta-detail { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-muted); }
 
         .cta-detail svg { color: var(--green); width: 16px; height: 16px; }
 
@@ -704,46 +648,18 @@
             gap: 20px;
         }
 
-        .footer-left p {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            font-family: 'DM Mono', monospace;
-        }
+        .footer-left p { font-size: 0.8rem; color: var(--text-dim); font-family: 'DM Mono', monospace; }
 
-        .footer-links {
-            display: flex;
-            gap: 32px;
-            align-items: center;
-        }
+        .footer-links { display: flex; gap: 32px; align-items: center; }
 
-        .footer-link {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: color 0.2s;
-            font-weight: 500;
-        }
-
+        .footer-link { font-size: 0.85rem; color: var(--text-muted); text-decoration: none; transition: color 0.2s; font-weight: 500; }
         .footer-link:hover { color: var(--accent); }
 
-        .footer-contact {
-            font-size: 0.8rem;
-            color: var(--text-dim);
-            font-family: 'DM Mono', monospace;
-        }
-
-        .footer-contact a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+        .footer-contact { font-size: 0.8rem; color: var(--text-dim); font-family: 'DM Mono', monospace; }
+        .footer-contact a { color: var(--accent); text-decoration: none; }
 
         /* FADE IN */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
+        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .fade-up.visible { opacity: 1; transform: translateY(0); }
 
         /* RESPONSIVE */
@@ -779,24 +695,25 @@
             .video-section { padding: 80px 20px; }
             .screenshots-section { padding: 80px 20px; }
             .newsletters-section { padding: 80px 20px; }
+            .waitlist-section { padding: 80px 20px; }
+            .waitlist-details { gap: 16px; }
             footer { flex-direction: column; align-items: flex-start; padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
     <div class="nav-logo">MAP — My Accountability Partner</div>
     <div class="nav-links">
         <a href="#how" class="nav-link">How It Works</a>
+        <a href="#workshop" class="nav-link">Live Workshop</a>
         <a href="#newsletters" class="nav-link">Newsletter</a>
         <a href="https://substack.com/@datafrank" target="_blank" class="nav-link">Read on Substack</a>
         <a href="https://tally.so/r/zxjJMR" target="_blank" class="nav-cta">Get It Free →</a>
     </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
     <div class="hero-badge">
         <span class="hero-badge-dot"></span>
@@ -807,7 +724,7 @@
         Start showing up with a system.
     </h1>
     <p class="hero-sub fade-up">
-        MAP is the free Notion system for writers who keep asking <strong>"what do I post next?"</strong> — and then posting nothing. It removes the question entirely.
+        MAP is the free Notion system for writers who keep asking <strong>"what do I post next?"</strong> and then posting nothing. It removes the question entirely.
     </p>
     <div class="hero-cta-group fade-up">
         <a href="https://tally.so/r/zxjJMR" target="_blank" class="btn-primary">
@@ -818,7 +735,6 @@
     </div>
 </section>
 
-<!-- PROOF TICKER -->
 <div class="proof-bar">
     <div class="ticker-track">
         <div class="ticker-item"><strong>87 → 156</strong> subscribers in 30 days <span class="ticker-dot"></span></div>
@@ -838,7 +754,6 @@
     </div>
 </div>
 
-<!-- VIDEO SECTION -->
 <section class="video-section fade-up">
     <p class="section-label">See It In Action</p>
     <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(1.8rem, 3.5vw, 2.5rem); font-weight: 400; line-height: 1.2;">
@@ -856,14 +771,58 @@
     <p class="video-caption">83 → 147 subscribers in 30 days · Setup time: 5 minutes · Cost: Free</p>
 </section>
 
-<!-- PROBLEM SECTION -->
+<div id="workshop" class="waitlist-section fade-up">
+    <div class="waitlist-inner">
+        <div class="waitlist-badge">
+            <span class="waitlist-badge-dot"></span>
+            Live Workshop — Recurring
+        </div>
+        <h2>
+            Want MAP built<br>
+            <em>with you live?</em>
+        </h2>
+        <p>
+            Can't set up MAP alone? Join the waitlist and get notified when the next live workshop opens. Frank walks you through everything from scratch. Free. Small group. Maximum 10 people per session.
+        </p>
+        <div class="waitlist-details">
+            <div class="waitlist-detail">
+                <span class="waitlist-detail-dot"></span>
+                Free to attend
+            </div>
+            <div class="waitlist-detail">
+                <span class="waitlist-detail-dot"></span>
+                Max 10 per session
+            </div>
+            <div class="waitlist-detail">
+                <span class="waitlist-detail-dot"></span>
+                Runs every 2 weeks
+            </div>
+            <div class="waitlist-detail">
+                <span class="waitlist-detail-dot"></span>
+                Live on Zoom
+            </div>
+        </div>
+        <iframe
+            class="waitlist-frame"
+            src="https://tally.so/embed/gDZr7M?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="200"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="MAP Workshop Waitlist">
+        </iframe>
+        <p class="waitlist-note">You'll be notified by email before each session. Unsubscribe anytime.</p>
+    </div>
+</div>
+
 <section class="section fade-up">
     <p class="section-label">The Problem</p>
     <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; max-width: 700px; line-height: 1.2;">
         You're not inconsistent.<br>
         You're writing without a system.
     </h2>
-
     <div class="problem-grid">
         <div class="problem-item">
             <div class="problem-icon">🗑️</div>
@@ -888,7 +847,6 @@
     </div>
 </section>
 
-<!-- STATEMENT -->
 <div class="statement-section fade-up">
     <h2>
         MAP removes <em>"what do I post next?"</em><br>
@@ -896,7 +854,6 @@
     </h2>
 </div>
 
-<!-- PRODUCT SCREENSHOTS -->
 <section class="screenshots-section fade-up">
     <p class="section-label">Inside the Product</p>
     <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; max-width: 600px; line-height: 1.2;">
@@ -904,23 +861,21 @@
     </h2>
     <div class="screenshots-grid">
         <div class="screenshot-card">
-            <img src="My_Accountability_Partner.png" alt="MAP Dashboard — Content Master and Task Overview" loading="lazy">
-            <div class="screenshot-label">→ Master Dashboard — Content Master + Task Tracker</div>
+            <img src="My_Accountability_Partner.png" alt="MAP Dashboard" loading="lazy">
+            <div class="screenshot-label">Master Dashboard — Content Master + Task Tracker</div>
         </div>
         <div class="screenshot-card">
-            <img src="Content_Calendar.png" alt="MAP Content Calendar View" loading="lazy">
-            <div class="screenshot-label">→ Content Calendar — Ideas mapped to publish dates</div>
+            <img src="Content_Calendar.png" alt="MAP Content Calendar" loading="lazy">
+            <div class="screenshot-label">Content Calendar — Ideas mapped to publish dates</div>
         </div>
     </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section id="how" class="how-section fade-up">
     <p class="section-label">How It Works</p>
     <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; max-width: 600px; line-height: 1.2;">
         Three steps. Five minutes.<br>One system that runs itself.
     </h2>
-
     <div class="steps">
         <div class="step">
             <div class="step-num">STEP 01</div>
@@ -940,14 +895,12 @@
     </div>
 </section>
 
-<!-- PROOF NUMBERS -->
 <div class="proof-section fade-up">
     <div class="proof-inner">
         <p class="section-label">Verified Results — November 2025</p>
         <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; max-width: 600px; line-height: 1.2;">
             30 days of showing up.<br>This is what the data shows.
         </h2>
-
         <div class="proof-numbers">
             <div class="proof-num">
                 <div class="number">+79.3%</div>
@@ -967,69 +920,55 @@
             </div>
         </div>
         <p class="proof-source">
-            Data verified from DATAFRANK.SUBSTACK.COM dashboard · November 1–30, 2025 ·
-            <a href="https://open.substack.com/pub/datafrank/p/240-subscribers-real-momentum-and?r=4lx8e5&utm_campaign=post&utm_medium=web" target="_blank">Read the full breakdown →</a>
+            Data verified from DATAFRANK.SUBSTACK.COM · November 1-30, 2025 ·
+            <a href="https://open.substack.com/pub/datafrank/p/240-subscribers-real-momentum-and?r=4lx8e5&utm_campaign=post&utm_medium=web" target="_blank">Read the full breakdown</a>
         </p>
     </div>
 </div>
 
-<!-- WHAT'S INSIDE -->
 <section class="inside-section fade-up">
     <p class="section-label">What's Inside MAP</p>
     <h2 style="font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; max-width: 600px; line-height: 1.2;">
         Everything you need.<br>Nothing you don't.
     </h2>
-
     <div class="inside-grid">
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>Content Master Dashboard</h4>
                 <p>Every post idea, draft, and published piece in one place. Never lose a thought again.</p>
             </div>
         </div>
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>Input Tracker</h4>
                 <p>Track the 3-5 daily actions that actually grow your Substack. Did you show up today? Yes or no.</p>
             </div>
         </div>
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>Three Filters System</h4>
-                <p>Output, Energy, Clarity. Know exactly what to work on based on how you feel today — not how you feel in theory.</p>
+                <p>Output, Energy, Clarity. Know exactly what to work on based on how you feel today.</p>
             </div>
         </div>
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>Growth Analytics View</h4>
                 <p>See which inputs are moving your numbers. Stop guessing. Start adjusting with actual data.</p>
             </div>
         </div>
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>10+ Email Templates</h4>
                 <p>Copy-paste templates for welcome emails, subscriber replies, and collaboration outreach.</p>
             </div>
         </div>
         <div class="inside-item">
-            <div class="inside-check">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
-            </div>
+            <div class="inside-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <div>
                 <h4>Lifetime Updates Free</h4>
                 <p>MAP improves every month. Every update is free forever for everyone who gets in now.</p>
@@ -1038,7 +977,6 @@
     </div>
 </section>
 
-<!-- NEWSLETTERS SECTION -->
 <div id="newsletters" class="newsletters-section fade-up">
     <div class="newsletters-inner">
         <p class="section-label">Read Before You Decide</p>
@@ -1046,37 +984,26 @@
             Don't take my word for it.<br>
             <em style="color: var(--accent);">Read the work first.</em>
         </h2>
-
         <div class="newsletters-grid">
             <a href="https://open.substack.com/pub/datafrank/p/240-subscribers-real-momentum-and?r=4lx8e5&utm_campaign=post&utm_medium=web" target="_blank" class="newsletter-card">
                 <div class="newsletter-num">MOST READ</div>
                 <h4>240 Subscribers. Real Momentum. And One Thing I Can't Prove Yet.</h4>
-                <div class="newsletter-read">
-                    Read on Substack
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </div>
+                <div class="newsletter-read">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
             <a href="https://open.substack.com/pub/datafrank/p/the-1-mistake-that-stops-writers?utm_campaign=post-expanded-share&utm_medium=web" target="_blank" class="newsletter-card">
                 <div class="newsletter-num">MOST SHARED</div>
                 <h4>The #1 Mistake That Stops Writers From Seeing Results (And How to Fix It in 10 Minutes)</h4>
-                <div class="newsletter-read">
-                    Read on Substack
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </div>
+                <div class="newsletter-read">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
             <a href="https://open.substack.com/pub/datafrank/p/how-my-accountability-partner-keeps?utm_campaign=post-expanded-share&utm_medium=web" target="_blank" class="newsletter-card">
                 <div class="newsletter-num">THE ORIGIN STORY</div>
                 <h4>How My Accountability Partner Keeps Me Going</h4>
-                <div class="newsletter-read">
-                    Read on Substack
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </div>
+                <div class="newsletter-read">Read on Substack <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </a>
         </div>
     </div>
 </div>
 
-<!-- FOR WHO -->
 <section class="who-section fade-up">
     <p class="section-label">Is This For You?</p>
     <div class="who-inner">
@@ -1103,52 +1030,35 @@
     </div>
 </section>
 
-<!-- CTA -->
 <div class="cta-section fade-up">
     <div class="cta-inner">
         <p class="section-label">Get Started — It's Free</p>
-        <h2>
-            Stop deciding.<br>
-            <em>Start shipping.</em>
-        </h2>
+        <h2>Stop deciding.<br><em>Start shipping.</em></h2>
         <p>Fill out a 2-minute form. Get your custom MAP template. Show up tomorrow with a system that removes every excuse except the writing itself.</p>
         <a href="https://tally.so/r/zxjJMR" target="_blank" class="btn-primary" style="display: inline-flex;">
             Get MAP Free
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
         <div class="cta-details">
-            <div class="cta-detail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                Free forever
-            </div>
-            <div class="cta-detail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                No credit card
-            </div>
-            <div class="cta-detail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                2 minutes to set up
-            </div>
-            <div class="cta-detail">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
-                Lifetime updates included
-            </div>
+            <div class="cta-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Free forever</div>
+            <div class="cta-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>No credit card</div>
+            <div class="cta-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>2 minutes to set up</div>
+            <div class="cta-detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Lifetime updates included</div>
         </div>
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <div class="footer-left">
         <p style="font-family: 'Instrument Serif', serif; font-size: 1rem; color: var(--text-muted); margin-bottom: 4px;">MAP — My Accountability Partner</p>
-        <p>© 2026 Data Frank · Built for writers writing into the void.</p>
+        <p>2026 Data Frank · Built for writers writing into the void.</p>
     </div>
     <div class="footer-links">
         <a href="https://substack.com/@datafrank" target="_blank" class="footer-link">Newsletter</a>
-        <a href="https://open.substack.com/pub/datafrank/p/240-subscribers-real-momentum-and?r=4lx8e5" target="_blank" class="footer-link">Latest Issue</a>
+        <a href="#workshop" class="footer-link">Live Workshop</a>
         <a href="https://tally.so/r/zxjJMR" target="_blank" class="footer-link">Get MAP</a>
     </div>
-    <p class="footer-contact">Questions? <a href="https://substack.com/@datafrank" target="_blank">DM on Substack →</a></p>
+    <p class="footer-contact">Questions? <a href="https://substack.com/@datafrank" target="_blank">DM on Substack</a></p>
 </footer>
 
 <script>
