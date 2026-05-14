@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="icon" href="/favicon.ico">
+
   <title>MAP — Stop Guessing What To Post</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,9 +66,8 @@
     }
 
     .nav-inner {
-      height: 76px;
+      height: 72px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
     }
 
@@ -76,12 +79,13 @@
       font-size: 1rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      flex-shrink: 0;
     }
 
     .logo-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 14px;
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
       background: linear-gradient(135deg, var(--accent), #ff8f66);
       display: flex;
       align-items: center;
@@ -93,12 +97,12 @@
 
     .logo-mark::before {
       content: '';
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       border: 2px solid white;
       border-top-color: transparent;
       border-right-color: transparent;
-      border-radius: 6px;
+      border-radius: 5px;
       transform: rotate(-45deg);
       position: absolute;
     }
@@ -110,13 +114,12 @@
     }
 
     .logo-text strong {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text);
     }
 
-    
-
     .nav-links {
+      margin-left: auto;
       display: flex;
       align-items: center;
       gap: 28px;
@@ -132,14 +135,18 @@
       color: var(--text);
     }
 
+    .nav-links .btn {
+      margin-left: 20px;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
       background: var(--accent);
-      color: #fff;
-      padding: 16px 28px;
+      color: #fff !important;
+      padding: 14px 22px;
       border-radius: 999px;
       font-weight: 700;
       transition: 0.25s ease;
@@ -150,7 +157,7 @@
     }
 
     .hero {
-      padding: 180px 0 120px;
+      padding: 145px 0 120px;
       text-align: center;
       position: relative;
     }
@@ -206,7 +213,7 @@
 
     .btn-secondary {
       border: 1px solid var(--border);
-      padding: 16px 28px;
+      padding: 14px 22px;
       border-radius: 999px;
       color: var(--text);
     }
@@ -216,12 +223,12 @@
     }
 
     .section-label {
-      color: var(--accent);
+      color: var(--muted);
       font-family: 'DM Mono', monospace;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-size: 0.75rem;
-      margin-bottom: 20px;
+      letter-spacing: 0.14em;
+      font-size: 0.72rem;
+      margin-bottom: 22px;
     }
 
     h2 {
@@ -435,6 +442,25 @@
       flex-wrap: wrap;
     }
 
+    .footer-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact {
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    .footer-contact:hover {
+      color: var(--text);
+      border-color: rgba(255,255,255,0.18);
+    }
+
     .sticky-mobile {
       display: none;
     }
@@ -451,6 +477,15 @@
 
       .nav-links a:not(.btn) {
         display: none;
+      }
+
+      .nav-links {
+        gap: 0;
+      }
+
+      .nav-links .btn {
+        margin-left: auto;
+        padding: 12px 18px;
       }
 
       section {
@@ -476,12 +511,12 @@
 
 <nav>
   <div class="container nav-inner">
-    <a href="/" class="logo">
+    <a href="/" class="logo" aria-label="Go to MAP homepage">
       <div class="logo-mark"></div>
       <div class="logo-text">
         <strong>MAP</strong>
       </div>
-    </div>
+    </a>
 
     <div class="nav-links">
       <a href="#start">Start Here</a>
@@ -492,8 +527,8 @@
       <a class="btn" href="https://tally.so/r/zxjJMR" target="_blank">
         Start Tracking Free
       </a>
-    </a>
     </div>
+  </div>
 </nav>
 
 <section class="hero">
@@ -803,21 +838,20 @@
   <div class="container footer-inner">
 
     <div>
-      <a href="/" class="logo">
-      <div class="logo-mark"></div>
-      <div class="logo-text">
-        <strong>MAP</strong>
-      </div>
-    </div>
+      <a href="/" class="logo" aria-label="Go to MAP homepage">
+        <div class="logo-mark"></div>
+        <div class="logo-text">
+          <strong>MAP</strong>
+        </div>
+      </a>
       <p style="margin-top:8px">Built for creators tired of posting into the void.</p>
     </div>
 
-    <div style="display:flex; align-items:center; gap:24px; flex-wrap:wrap;">
+    <div class="footer-actions">
       <a href="https://datafrank.substack.com/?utm_campaign=profile_chips" target="_blank">Read the Newsletter</a>
-      <a href="mailto:mp.partner712@gmail.com" style="padding:10px 18px; border:1px solid var(--border); border-radius:999px; transition:0.2s ease;">
+      <a href="mailto:mp.partner712@gmail.com" class="footer-contact">
         Contact MAP
       </a>
-    </a>
     </div>
 
   </div>
