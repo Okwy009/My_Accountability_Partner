@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,29 +157,65 @@
       padding: 14px 22px;
       border-radius: 999px;
       color: var(--text);
+      transition: 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      border-color: rgba(255,107,53,0.25);
+      transform: translateY(-2px);
     }
 
     .hero {
-      padding: 160px 0 120px;
+      padding: 170px 0 140px;
       position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: 8%;
+      top: 180px;
+      width: 520px;
+      height: 520px;
+
+      background:
+        radial-gradient(
+          circle,
+          rgba(255,107,53,0.12),
+          transparent 70%
+        );
+
+      filter: blur(80px);
+      z-index: -1;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 80px;
       align-items: center;
     }
 
     .hero-left {
-      max-width: 620px;
+      max-width: 540px;
+    }
+
+    .hero-right {
+      transform: scale(1.08);
+      transform-origin: center;
     }
 
     .hero-right img {
-      width: 100%;
-      border-radius: 28px;
-      border: 1px solid var(--border);
-      box-shadow: 0 30px 80px rgba(255,107,53,0.14);
+      width: 118%;
+      max-width: none;
+
+      border-radius: 32px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      box-shadow:
+        0 30px 80px rgba(255,107,53,0.12),
+        0 0 0 1px rgba(255,255,255,0.03);
     }
 
     .badge {
@@ -205,9 +242,10 @@
     h1 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(3.2rem, 8vw, 6.4rem);
-      line-height: 1;
+      line-height: 0.95;
       font-weight: 400;
-      margin-bottom: 30px;
+      margin-bottom: 34px;
+      letter-spacing: -0.04em;
     }
 
     h1 em {
@@ -216,8 +254,8 @@
     }
 
     .hero p {
-      max-width: 580px;
-      margin-bottom: 42px;
+      max-width: 560px;
+      margin-bottom: 46px;
       color: var(--muted);
       font-size: 1.08rem;
     }
@@ -229,7 +267,7 @@
     }
 
     section {
-      padding: 110px 0;
+      padding: 140px 0;
     }
 
     .section-label {
@@ -244,10 +282,11 @@
     h2 {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(2.2rem, 5vw, 4rem);
-      line-height: 1.1;
+      line-height: 1.05;
       font-weight: 400;
-      margin-bottom: 24px;
+      margin-bottom: 26px;
       max-width: 780px;
+      letter-spacing: -0.03em;
     }
 
     .subcopy {
@@ -261,23 +300,23 @@
     .proof-grid {
       display: grid;
       grid-template-columns: repeat(4,1fr);
-      gap: 18px;
-      margin-top: 50px;
+      gap: 20px;
+      margin-top: 56px;
     }
 
     .problem-layout,
     .audience {
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      gap: 18px;
-      margin-top: 50px;
+      gap: 20px;
+      margin-top: 56px;
     }
 
     .reveal-grid {
       display: grid;
       grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-      margin-top: 50px;
+      gap: 20px;
+      margin-top: 56px;
     }
 
     .card,
@@ -285,10 +324,37 @@
     .workflow-step,
     .reveal-item,
     .metric {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.01)
+        );
+
+      border: 1px solid rgba(255,255,255,0.06);
+
+      border-radius: 28px;
+
+      padding: 34px;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.03),
+        0 20px 40px rgba(0,0,0,0.22);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .card:hover,
+    .problem:hover,
+    .workflow-step:hover,
+    .reveal-item:hover,
+    .metric:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,107,53,0.18);
     }
 
     .card-number,
@@ -315,14 +381,22 @@
     }
 
     .workflow-step {
-      background: linear-gradient(to bottom, var(--bg-2), var(--bg-3));
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.01)
+        );
     }
 
     .video {
-      border-radius: 28px;
+      border-radius: 32px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      margin-top: 50px;
+      border: 1px solid rgba(255,255,255,0.06);
+      margin-top: 56px;
+
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.3);
     }
 
     iframe {
@@ -375,17 +449,30 @@
     }
 
     .cta-box {
-      background: linear-gradient(to bottom, var(--bg-2), var(--bg-3));
-      border: 1px solid var(--border);
-      border-radius: 32px;
-      padding: 70px 30px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.02),
+          rgba(255,255,255,0.01)
+        );
+
+      border: 1px solid rgba(255,255,255,0.06);
+
+      border-radius: 36px;
+
+      padding: 90px 36px;
+
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.03),
+        0 20px 60px rgba(0,0,0,0.28);
     }
 
     footer {
-      padding: 40px 0 80px;
+      padding: 50px 0 90px;
       color: var(--muted);
       border-top: 1px solid var(--border);
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     .footer-inner {
@@ -445,7 +532,12 @@
       }
 
       .hero-right {
+        transform: scale(1);
         order: -1;
+      }
+
+      .hero-right img {
+        width: 100%;
       }
 
       .nav-links a:not(.btn) {
@@ -464,6 +556,15 @@
       .sticky-mobile .btn {
         width: 100%;
       }
+
+      section {
+        padding: 90px 0;
+      }
+
+      h1 {
+        font-size: 4.2rem;
+      }
+
     }
 
   </style>
@@ -482,9 +583,13 @@
     </a>
 
     <div class="nav-links">
+
       <a href="#start">Start Here</a>
+
       <a href="#workflow">Workflow</a>
+
       <a href="dashboard.html">Dashboard</a>
+
       <a href="input-tracker.html">Tracker</a>
 
       <a href="https://datafrank.substack.com/?utm_campaign=profile_chips" target="_blank">
@@ -494,6 +599,7 @@
       <a class="btn" href="https://tally.so/r/zxjJMR" target="_blank">
         Start Tracking Free
       </a>
+
     </div>
 
   </div>
@@ -518,8 +624,9 @@
         </h1>
 
         <p>
-          MAP helps overwhelmed creators reduce decision fatigue,
-          stay consistent, and finally see what’s actually working.
+          MAP helps creators stop disappearing between posts,
+          reduce decision fatigue, and finally see what actions
+          actually create momentum.
         </p>
 
         <div class="hero-actions">
@@ -631,271 +738,4 @@
   </div>
 
 </section>
-
-<section id="workflow">
-
-  <div class="container">
-
-    <div class="section-label">DAILY WORKFLOW</div>
-
-    <h2>
-      This is what MAP actually feels like daily.
-    </h2>
-
-    <div class="workflow">
-
-      <div class="workflow-step">
-        <span>MORNING</span>
-        <h3>Choose Inputs</h3>
-        <p>Know exactly what matters today.</p>
-      </div>
-
-      <div class="workflow-step">
-        <span>AFTERNOON</span>
-        <h3>Track Actions</h3>
-        <p>Publishing. Outreach. Engagement.</p>
-      </div>
-
-      <div class="workflow-step">
-        <span>EVENING</span>
-        <h3>Review Signals</h3>
-        <p>See what generated responses.</p>
-      </div>
-
-      <div class="workflow-step">
-        <span>WEEKLY</span>
-        <h3>Review Patterns</h3>
-        <p>Understand what actually moved growth.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="demo">
-
-  <div class="container">
-
-    <div class="section-label">PRODUCT WALKTHROUGH</div>
-
-    <h2>
-      Watch MAP in under five minutes.
-    </h2>
-
-    <p class="subcopy">
-      Calm walkthrough. No fluff. No fake productivity energy.
-    </p>
-
-    <div class="video">
-      <iframe src="https://www.youtube.com/embed/utOQLDqdWFA" allowfullscreen></iframe>
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="section-label">WHAT MAP REVEALS</div>
-
-    <h2>
-      After 30 days, patterns start appearing.
-    </h2>
-
-    <div class="reveal-grid">
-
-      <div class="reveal-item">
-        Which posts attract replies.
-      </div>
-
-      <div class="reveal-item">
-        Which comments create conversations.
-      </div>
-
-      <div class="reveal-item">
-        When consistency breaks.
-      </div>
-
-      <div class="reveal-item">
-        What actions create subscribers.
-      </div>
-
-      <div class="reveal-item">
-        Whether visibility correlates with growth.
-      </div>
-
-      <div class="reveal-item">
-        Your quiet momentum patterns.
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="proof" id="proof">
-
-  <div class="container">
-
-    <div class="section-label">REAL MOMENTUM</div>
-
-    <h2>
-      Consistency creates clarity faster than motivation ever will.
-    </h2>
-
-    <div class="proof-grid">
-
-      <div class="metric">
-        <strong>+79%</strong>
-        <p>Subscriber growth in 30 days.</p>
-      </div>
-
-      <div class="metric">
-        <strong>+178%</strong>
-        <p>View growth after consistent tracking.</p>
-      </div>
-
-      <div class="metric">
-        <strong>60+</strong>
-        <p>Posts shipped with reduced friction.</p>
-      </div>
-
-      <div class="metric">
-        <strong>0</strong>
-        <p>Days lost wondering what to post next.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-  <div class="container">
-
-    <div class="section-label">WHO THIS IS FOR</div>
-
-    <h2>
-      MAP is for creators overwhelmed by inconsistency.
-    </h2>
-
-    <div class="audience">
-
-      <div class="card">
-
-        <h3 style="margin-bottom:20px">
-          This is for you if...
-        </h3>
-
-        <ul>
-          <li>You keep restarting your publishing habit.</li>
-          <li>You overthink what to post.</li>
-          <li>You feel progress is invisible.</li>
-          <li>You want a calmer publishing system.</li>
-          <li>You are under 100 subscribers.</li>
-        </ul>
-
-      </div>
-
-      <div class="card">
-
-        <h3 style="margin-bottom:20px">
-          This is NOT for you if...
-        </h3>
-
-        <ul>
-          <li>You want viral shortcuts.</li>
-          <li>You expect instant growth hacks.</li>
-          <li>You already have a stable system.</li>
-          <li>You do not want to show up consistently.</li>
-        </ul>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section class="cta">
-
-  <div class="container">
-
-    <div class="cta-box">
-
-      <div class="section-label">START TRACKING</div>
-
-      <h2 style="margin-inline:auto">
-        Stop resetting every week.
-      </h2>
-
-      <p class="subcopy" style="margin-inline:auto; margin-bottom:40px; text-align:center">
-        Build a calmer system for showing up consistently.
-      </p>
-
-      <a class="btn" href="https://tally.so/r/zxjJMR" target="_blank">
-        Start Tracking Free
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <div>
-
-      <a href="/" class="logo" aria-label="Go to MAP homepage">
-
-        <div class="logo-mark"></div>
-
-        <div class="logo-text">
-          <strong>MAP</strong>
-        </div>
-
-      </a>
-
-      <p style="margin-top:8px">
-        Built for creators tired of posting into the void.
-      </p>
-
-    </div>
-
-    <div class="footer-actions">
-
-      <a href="https://datafrank.substack.com/?utm_campaign=profile_chips" target="_blank">
-        Read the Newsletter
-      </a>
-
-      <a href="mailto:mp.partner712@gmail.com" class="footer-contact">
-        Contact MAP
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
-
-<div class="sticky-mobile">
-
-  <a class="btn" href="https://tally.so/r/zxjJMR" target="_blank">
-    Start Tracking Free
-  </a>
-
-</div>
-
-</body>
-</html>
+```
